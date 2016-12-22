@@ -15,15 +15,13 @@ public class RakutenSolutionTest {
 
         RakutenSolution rakutenSolution = new RakutenSolution();
 
-        assertEquals(rakutenSolution.solution(3,4,0),3);
-        assertEquals(rakutenSolution.solution(3,4,1),4);
+        assertEquals(rakutenSolution.solution(3, 4, 0), 3);
+        assertEquals(rakutenSolution.solution(3, 4, 1), 4);
 
-        assertEquals(rakutenSolution.solution(3,4,2),7);
-        assertEquals(rakutenSolution.solution(3,4,3),11);
-        assertEquals(rakutenSolution.solution(3,4,4),18);
-        assertEquals(rakutenSolution.solution(3,4,5),29);
-
-        //int solution = rakutenSolution.solution(2_147_483_647, 4, 500);
-
+        assertEquals(rakutenSolution.solution(3, 4, 2), 7);
+        assertEquals(rakutenSolution.solution(3, 4, 3), 11);
+        assertEquals(rakutenSolution.solution(3, 4, 4), 18);
+        assertEquals(rakutenSolution.solution(3, 4, 5), 29);
+        assertEquals(rakutenSolution.solution(2_147_483_647, 4, 900_000), 909838742);
     }
 }

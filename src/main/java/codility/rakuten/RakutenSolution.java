@@ -2,49 +2,49 @@ package codility.rakuten;
 
 class RakutenSolution {
 
-    final int divider = 1_000_000_007;
+    private static final int DIVIDER = 1_000_000_007;
 
-    public int solution(int A, int B, int N) {
+    public int solution(int a, int b, int n) {
 
         // write your code in Java SE 8
-        if (A < 0 || B < 0) {
+        if (a < 0 || b < 0) {
             return 0;
         }
 
-        if (N == 0) {
-            return A % divider;
+        if (n == 0) {
+            return a % DIVIDER;
         }
 
-        if (N == 1) {
-            return B % divider;
+        if (n == 1) {
+            return b % DIVIDER;
         }
 
-        int[] array = new int[N + 1];
+        int[] array = new int[n + 1];
 
-        array[0] = A % divider;
-        array[1] = B % divider;
+        array[0] = a % DIVIDER;
+        array[1] = b % DIVIDER;
 
-        for (int i = 2; i <= N; i++) {
-            array[i] = (array[i - 1] + array[i - 2]) % divider;
+        for (int i = 2; i <= n; i++) {
+            array[i] = (array[i - 1] + array[i - 2]) % DIVIDER;
         }
-        return array[N];
+        return array[n];
     }
 
-    public int solutionRecursive(int A, int B, int N) {
+    public int solutionRecursive(int a, int b, int n) {
 
-        if (A < 0 || B < 0) {
+        if (a < 0 || b < 0) {
             return 0;
         }
 
-        if (N == 0) {
-            return A % divider;
+        if (n == 0) {
+            return a % DIVIDER;
         }
 
-        if (N == 1) {
-            return B % divider;
+        if (n == 1) {
+            return b % DIVIDER;
         }
 
         // write your code in Java SE 8
-        return (solution(A, B, N - 1) + solution(A, B, N - 2)) % divider;
+        return (solution(a, b, n - 1) + solution(a, b, n - 2)) % DIVIDER;
     }
 }
