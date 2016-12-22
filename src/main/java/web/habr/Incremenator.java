@@ -18,17 +18,21 @@ class Incremenator extends Thread {
     @Override
     public void run() {
         do {
+//            System.out.println(Thread.currentThread().getName());
+
             if (!mFinish)    //Проверка на необходимость завершения
             {
-                if (mIsIncrement)
+                if (mIsIncrement) {
                     Program.mValue++;    //Инкремент
-                else
+                } else {
                     Program.mValue--;    //Декремент
+                }
 
                 //Вывод текущего значения переменной
                 System.out.print(Program.mValue + " ");
-            } else
+            } else {
                 return;        //Завершение потока
+            }
 
             //Приостановка потока на 1 сек.
             try {
@@ -36,7 +40,6 @@ class Incremenator extends Thread {
             } catch (InterruptedException e) {
 
             }
-        }
-        while (true);
+        } while (true);
     }
 }

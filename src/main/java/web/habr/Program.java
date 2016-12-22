@@ -7,7 +7,7 @@ public class Program
 {
 	//Переменая, которой оперирует инкременатор
 	public static int mValue = 0;
-
+	//  1 2 1 0 -1 -2 -1 0 1 2 3 4
 	static Incremenator mInc;	//Объект побочного потока
 
 	static int twoSeconds = 2 * 1000;

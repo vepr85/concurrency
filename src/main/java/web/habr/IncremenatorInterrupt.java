@@ -14,6 +14,7 @@ class IncremenatorInterrupt extends Thread {
     @Override
     public void run() {
         do {
+            System.out.println(Thread.currentThread().getName());
             if (!Thread.interrupted())    //Проверка прерывания
             {
                 if (mIsIncrement) Program.mValue++;    //Инкремент
@@ -21,8 +22,9 @@ class IncremenatorInterrupt extends Thread {
 
                 //Вывод текущего значения переменной
                 System.out.print(Program.mValue + " ");
-            } else
+            } else {
                 return;        //Завершение потока
+            }
 
             try {
                 Thread.sleep(1000);        //Приостановка потока на 1 сек.

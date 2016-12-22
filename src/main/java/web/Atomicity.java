@@ -30,8 +30,13 @@ public class Atomicity extends Thread {
     public void run() {
         while (true) {
 //            synchronized (Atomicity.class) {
-                if (b = !b) i++;
-                else i--;
+            if (b = !b) {
+                i++;
+                System.out.println("INCREMENT: " + Thread.currentThread().getName());
+            } else {
+                i--;
+                System.out.println("DECREMENT: " + Thread.currentThread().getName());
+            }
 //            }
         }
     }
