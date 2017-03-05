@@ -18,7 +18,6 @@ public class EquilibriumTest {
         final int[] array2 = new int[]{0, -2_147_483_648, -2_147_483_648};
         final int[] array3 = new int[]{0, 2_147_483_647, 2_147_483_647};
 
-
         assertTrue(equilibrium.solution(new int[]{1_082_132_608, 0, 1_082_132_608}) == 1);
 
         int solution = equilibrium.solution(array1);
@@ -36,7 +35,5 @@ public class EquilibriumTest {
 
         assertTrue(equilibrium.solution(new int[0]) == -1);
         assertTrue(equilibrium.solution(new int[1]) == 0);
-
     }
-
 }

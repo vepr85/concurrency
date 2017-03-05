@@ -1,4 +1,4 @@
-package codility;
+package codility.iterations;
 
 /**
  * Created by abyakimenko on 19.12.2016.

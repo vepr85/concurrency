@@ -1,5 +1,7 @@
 package ocp.z809;
 
+import java.util.Map;
+import java.util.TreeMap;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -14,10 +16,24 @@ import java.util.concurrent.Future;
 public class ZooInfo {
     public static void main(String[] args) {
 
+        Map<String,String> stringMap = new TreeMap<>();
+
+        stringMap.put("F","1");
+        stringMap.put("Z","2");
+        stringMap.put("R","3");
+        stringMap.put("T","4");
+        stringMap.put("G","6");
+        stringMap.put("B","7");
+        stringMap.put("U","8");
+        stringMap.put("C","9");
+        stringMap.put("A","5");
+
+
         ExecutorService service = null;
         try {
             service = Executors.newSingleThreadExecutor();
 //            service = Executors.newCachedThreadPool();
+
 
             System.out.println("begin");
             service.execute(() -> System.out.println("Printing zoo inventory before"));

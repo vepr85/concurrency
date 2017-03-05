@@ -1,5 +1,7 @@
 package codility;
 
+import codility.iterations.binaryGap;
+import codility.iterations.binaryGapPasha;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -4,8 +4,11 @@ import java.util.concurrent.Callable;
 
 /**
  * Created by abyakimenko on 05.10.2016.
+ *
+ * TEST
  */
 public class TaskWithResult implements Callable<String> {
+
 
     private int id;
 
